@@ -1,4 +1,4 @@
-namespace ApiConection
+namespace ApiConection.Models
 {
     public class WeatherForecast
     {
