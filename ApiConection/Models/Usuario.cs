@@ -8,7 +8,7 @@
         public string Correo { get; set; }
         public string telefono { get; set; }
         public string Direccion { get; set; }
-        public ICollection<Mascota> Mascotas { get; set; }
+        public ICollection<Mascota> Mascotas { get; set; } = new List<Mascota>();
     }
 
 }

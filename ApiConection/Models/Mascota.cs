@@ -1,4 +1,6 @@
-﻿namespace ApiConection.Models
+﻿using System.Text.Json.Serialization;
+
+namespace ApiConection.Models
 {
     public class Mascota
     {
@@ -8,6 +10,7 @@
         public string Raza { get; set; }
         public int Edad { get; set; }
         public int UsuarioId { get; set; }
+        [JsonIgnore]
         public Usuario? Usuario { get; set; }
     }
 
