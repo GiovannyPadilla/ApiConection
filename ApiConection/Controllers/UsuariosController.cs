@@ -90,5 +90,19 @@ namespace ApiConection.Controllers
         {
             return _context.Usuarios.Any(e => e.Id == id);
         }
+
+        // GET: api/Usuarios/login?RUsuario=alguien&Contrasena=1234
+        [HttpGet("login")]
+        public async Task<ActionResult<Usuario>> Login(string RUsuario, string Contrasena)
+        {
+            var usuario = await _context.Usuarios
+                .FirstOrDefaultAsync(u => u.RUsuario == RUsuario && u.Contrasena == Contrasena);
+
+            if (usuario == null)
+                return NotFound();
+
+            return Ok(usuario);
+        }
+
     }
 }
