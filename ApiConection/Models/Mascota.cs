@@ -9,6 +9,7 @@ namespace ApiConection.Models
         public string Especie { get; set; }
         public string Raza { get; set; }
         public int Edad { get; set; }
+        public DateTime FechaNacimiento { get; set; }
         public int UsuarioId { get; set; }
         [JsonIgnore]
         public Usuario? Usuario { get; set; }

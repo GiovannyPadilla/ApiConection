@@ -12,5 +12,8 @@ namespace ApiConection.Data
         }
         public DbSet<Mascota> Mascotas { get; set; }
         public DbSet<Usuario> Usuarios { get; set; }
+        public DbSet<Veterinarios> Veterinarios { get; set; }
+        public DbSet<Cita> Citas { get; set; }
+
     }
 }
